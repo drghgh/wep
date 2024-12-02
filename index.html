@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منصة تعلم اللغات</title>
+  
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="custom-banner">
+  <div class="banner-content">
+    <h1>مرحبًا بك في منصة تعلم اللغات</h1>
+    <p>ابدأ رحلتك الآن لتعلم لغات جديدة بسهولة وفعالية.</p>
+    <div class="banner-buttons">
+      <a href="drw_1_t.html" class="btn-primary">استكشاف الدورات</a>
+      <a href="#about" class="btn-secondary">تعرف علينا</a>
+    </div>
+  </div>
+</div>
+<div id="user-name"></div>
+
+
+    <div id="user-info" style="display:none;">
+      <p id="welcome-message"></p>
+    </div>
+  </header>
+  <div class="_2cnFr _1T_BQ">
+    <h2 class="_2s6vW _1d_-b">&rlm;أنشئ حسابًا لتحفظ تقدمك!</h2>
+    <a href="login.html">
+      <button class="_3gxMJ _1rcV8 _1VYyp _1ursp _7jW2t W5q2t xMg2y" data-test="create-profile-juicy">
+        <span class="_9lHjd">&rlm;أنشئ حسابًا</span>
+      </button>
+    </a>
+    <a href="login.html">
+      <button class="_1rcV8 _1VYyp _1ursp _7jW2t cta8B xMg2y" data-test="sign-in-juicy">
+        <span class="_9lHjd">&rlm;تسجيل الدخول</span>
+      </button>
+    </a>
+  </div>
+  <section class="features-section">
+    <h2>مميزات منصة تعلم اللغات</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="global-learning.png" alt="التعلم التفاعلي">
+        <h3>التعلم التفاعلي</h3>
+        <p>استمتع بتجربة تعلم ممتعة من خلال دروس تفاعلية وتمارين متنوعة.</p>
+      </div>
+      <div class="feature-card">
+        <img src="webinar.png" alt="تتبع تقدمك">
+        <h3>تتبع تقدمك</h3>
+        <p>احتفظ بسجل لتقدمك اليومي وشاهد تحسن مستواك بمرور الوقت.</p>
+      </div>
+      <div class="feature-card">
+        <img src="medal.png" alt="لغات متعددة">
+        <h3>لغات متعددة</h3>
+        <p>اختر من بين العديد من اللغات العالمية لتعلمها بسهولة ويسر.</p>
+      </div>
+    </div>
+  </section>
+  <button class="trigger">open me</button>
+
+  <div class="drawer">
+  <div class="drawer-menu">
+
+    <a class="drawer-link" href="drw_1_t.html">
+      <img class="drawer-icon" src="house (1).png" alt="أيقونة تعلم">
+      <span>تعلَّم</span>
+    </a>
+
+
+
+    <a class="drawer-link" href="account.html">
+      <img class="drawer-icon" src="user.png" alt="أيقونة مستخدم">
+      <span>مستخدم</span>
+    </a>
+
+    <a class="drawer-link" href="drw_2_.html">
+      <img class="drawer-icon" src="help-desk.png" alt="أيقونة دعم">
+      <span>دعم</span>
+    </a>
+  </div>
+</div>  <div class="drawer">
+  <div class="drawer-header">
+<div class="drawer">
+  <div class="drawer-header">
+
+
+  
+      </div>
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+      <div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const userName = localStorage.getItem('userName');
+        const loginLogoutBtn = document.getElementById('login-logout-btn');
+        const userInfo = document.getElementById('user-info');
+        const welcomeMessage = document.getElementById('welcome-message');
+        
+        if (userName) {
+            userInfo.style.display = 'block';
+            welcomeMessage.innerText = `مرحبًا، ${userName}`;
+            loginLogoutBtn.innerText = 'تسجيل خروج';  
+            
+            loginLogoutBtn.addEventListener('click', function() {
+                localStorage.removeItem('userName');  
+                window.location.reload();  
+            });
+        } else {
+            loginLogoutBtn.addEventListener('click', function() {
+                window.location.href = 'login.html';
+            });
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var drawer = document.querySelector('.drawer');
+      var trigger = document.querySelector('.trigger');
+
+      trigger.addEventListener('mouseover', function() {
+        drawer.classList.add('show');
+      });
+
+      drawer.addEventListener('mouseleave', function() {
+        drawer.classList.remove('show');
+      });
+    });
+  </script>
+  </script>
+</body>
+</html>
