@@ -520,3 +520,40 @@ button:active {
 .trigger:active {
   transform: scale(0.95); 
 }
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+/* للشاشات الصغيرة مثل الهواتف */
+@media (max-width: 768px) {
+  body {
+      font-size: 14px;
+  }
+
+  .menu {
+      flex-direction: column;
+  }
+
+  .image {
+      width: 100%;
+      height: auto;
+  }
+}
+body {
+  font-size: calc(16px + 0.5vw);
+}
+table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.word-wrap {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
